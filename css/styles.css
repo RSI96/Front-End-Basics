@@ -1,3 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	background: blue
+	font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+	list-style-type: none;
+	display: none;
+}
+
+nav ul a {
+	display: block;
+	background: rgb(57, 60, 71);
+	font-size: 18px;
+	padding: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgb(243, 243, 244);
+	transition: color 0.1s ease, background 1s ease, padding 1s ease;
+}
+
+nav ul a:hover {
+	background: rgb(108, 111, 127);
+	color: rgb(57, 60, 71);
+	padding-left: 20px;
+}
+
+.nav-container .fa-connectdevelop{
+	font-size: 60px;
+	color: rgb(243, 243, 244);
+	align-self: center;
+	padding: 5px 0;
+}
+
+.nav-container{
+	padding: 0 20px;
+	background: rgb(108, 111, 127);
+	border-bottom: 3px solid rgb(243, 243, 244);
+	display: flex;
+	justify-content: space-between;
+}
+
+.bar{
+	width: 30px;
+	height: 4px;
+	margin: 8px;
+	background: rgb(243, 243, 244);
+}
+
+.btn{
+	padding: 2px;
+	display: inline-block;
+	border: 2px solid rgb(243, 243, 244);
+	align-self: center;
+}
+
+header{
+	min-height: 100vh;
+	background: linear-gradient(rgba(243, 243, 244, 0.01), rgba(243, 243, 244, 0.2)), url("../img/code_3.jpeg") no-repeat fixed center/cover;
+	flex-direction: column;
+}
+
+nav{
+	flex: 0 0 auto;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+}
+
+.banner .fa-connectdevelop{
+	font-size: 300px;
+	color: rgb(243, 243, 244);
+	align-self: center;
+	padding-top: 60px;
+
+}
+
+.banner{
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+.banner .banner-center{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.banner h1{
+	font-size: 50px;
+	text-transform: uppercase;
+	color: rgb(243, 243, 244);
+}
+
+.banner h3{
+	font-size: 20px;
+	text-transform: capitalize;
+	color: rgb(243, 243, 244);
+}
+
+.banner-icons{
+	margin-top: 5px;
+}
+
+.banner-icons a{
+	display: inline-block;
+	font-size: 50px;
+	color: rgb(57, 60, 71);
+	transition: transform 500ms ease;
+}
+
+.banner-icons a:hover{
+	transform: scale(1.1);
+}
+
+.icon-background{
+	background: rgb(243, 243, 244);
+	display: inline-block;
+	position: fixed;
+	z-index: -1;
+	margin: 15px 0 0 4px;
+}
+
+.html-background, .css-background{
+	width: 30px;
+	height: 32px;
+}
+
+.js-background{
+	width: 38px;
+	height: 38px;
 }
