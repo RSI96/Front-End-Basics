@@ -23,6 +23,10 @@ nav ul a {
 	transition: color 0.1s ease, background 1s ease, padding 1s ease;
 }
 
+nav ul li:first-child{
+	display: none;
+}
+
 nav ul a:hover {
 	background: rgb(108, 111, 127);
 	color: rgb(57, 60, 71);
@@ -69,7 +73,7 @@ nav{
 	flex: 0 0 auto;
 	position: fixed;
 	width: 100%;
-	z-index: 5;
+	z-index: 99;
 }
 
 .banner .fa-connectdevelop{
@@ -176,13 +180,70 @@ nav{
 		display: flex!important;
 		flex-wrap: wrap;
 		justify-content: center;
-		background: rgba(57, 60, 71, 0.7);
+		background: rgb(57, 60, 71);
 	}
 	nav ul a{
 		background: transparent;
+		border-bottom: 5px solid rgba(57, 60, 71, 0.8);
+		border-top: 5px solid rgba(57, 60, 71, 0.8);
 	}
+
+	nav ul li:first-child{
+		display: block;
+	}
+
+	nav ul li:first-child .fa-connectdevelop{
+		background: transparent;
+		font-size: 40px;
+		color: rgb(243, 243, 244);
+		align-self: center;
+		padding: 12px 6px 12px 0;
+	}
+
 	nav ul a:hover{
 		padding-left: 15px;
-		background: rgba(108, 111, 127, 0.7)
+		background: rgba(57, 60, 71, 0.8);
+		color: rgb(243, 243, 244);
+		border-bottom: 5px solid rgb(243, 243, 244);
+	}
+}
+
+/*#######################################################################*/
+.about-me{
+	min-height: 100vh;
+	background: url("../img/am_1.jpeg") no-repeat fixed center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about-me-center{
+	background: rgba(243, 243, 244, 0.7);
+	border-radius: 30px;
+	max-width: 600px;
+	padding: 15px 20px;
+}
+
+.about-me-center h1{
+	text-transform: capitalize;
+	font-size: 30px;
+	text-align: center;
+	padding: 5px 0 10px;
+}
+
+.about-me-center p{
+	text-transform: capitalize;
+	text-align: justify;
+}
+
+@media screen and (max-width: 776px){
+	.about-me-center{
+		max-width: 77vh;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.about-me-center p{
+		text-align: left;
 	}
 }
