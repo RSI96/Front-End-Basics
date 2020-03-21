@@ -145,11 +145,6 @@ nav{
 	height: 38px;
 }
 
-.js-background:hover{
-	width: 38px;
-	height: 38px;
-}
-
 .tooltip {
 	position: relative;
 	display: inline-block;
@@ -197,7 +192,7 @@ nav{
 		font-size: 40px;
 		color: rgb(243, 243, 244);
 		align-self: center;
-		padding: 12px 6px 12px 0;
+		padding: 12px 6px 12px 6px;
 	}
 
 	nav ul a:hover{
@@ -208,9 +203,9 @@ nav{
 	}
 }
 
-/*#######################################################################*/
-.about-me{
-	min-height: 100vh;
+/*section#######################################################################*/
+.about-me-section{
+	min-height: 80vh;
 	background: url("../img/am_1.jpeg") no-repeat fixed center/cover;
 	display: flex;
 	align-items: center;
@@ -230,10 +225,26 @@ nav{
 	text-align: center;
 	padding: 5px 0 10px;
 }
-
+.about-me-center ul{
+	margin-left: 25px;
+}
 .about-me-center p{
 	text-transform: capitalize;
 	text-align: justify;
+}
+
+.img-thumbnail{
+	width: 200px;
+	transition: transform 1s ease;
+	float: right;
+	margin: 8px 0 0 14px;
+	border: rgb(57, 60, 71) solid 3px;
+	overflow: hidden;
+}
+
+.img-thumbnail:hover{
+	cursor: pointer;
+	transform: scale(1.05);
 }
 
 @media screen and (max-width: 776px){
@@ -247,3 +258,84 @@ nav{
 		text-align: left;
 	}
 }
+/*footer#######################################################################*/
+footer{
+	background: rgb(57, 60, 71);
+	color: rgb(243, 243, 244);
+	min-height: 20vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 6fr 1fr;
+}
+
+.footer-social{
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.footer-map{
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+.footer-footer{
+	grid-column: 1/3;
+	grid-row: 2/3;
+	text-align: center;
+	padding: 5px;
+}
+
+.footer-social, .footer-icons, .footer-map{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.footer-icons a{
+	font-size: 50px;
+	color: rgb(243, 243, 244);
+	transition: transform 500ms ease;
+	padding: 5px;
+}
+.footer-social p{
+	padding: 0 10px 15px 5px;
+	text-align: center;
+}
+
+.footer-icons a:hover{
+	transform: scale(1.1);
+}
+
+.mapouter{
+	padding: 10px;
+}
+.gmap_canvas{
+	overflow:hidden;
+	background:none!important;
+	height:200px;
+	width:450px;
+}
+
+@media screen and (max-width: 776px){
+	footer{
+		grid-template-columns: 1fr;
+		grid-template-rows: 3fr 9fr 1fr;
+	}
+	.footer-footer{
+		grid-area: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer-social{
+		grid-area: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer-map{
+		grid-area: auto;
+	}
+}
+
